@@ -5,15 +5,17 @@
     font-family: "Poppins", sans-serif;
 }
 
-.container{
 
-   margin: 300px;
- 
-}
-.img-fluid{
-    width: 100%;
+.cascading-right {
+    margin-right: -50px;
+  }
+  .container{
+    /* margin: 100px; */
     
-}
-h1{
-   
-}
+  }
+
+  @media (max-width: 991.98px) {
+    .cascading-right {
+      margin-right: 0;
+    }
+  }
