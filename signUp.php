@@ -86,8 +86,8 @@
       </div>
     </div>
   </div>
-  <!-- Jumbotron -->
+
 </section>
-<!-- Section: Design Block -->
+
 </body>
 </html>
