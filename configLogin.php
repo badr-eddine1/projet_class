@@ -11,7 +11,7 @@ if( isset($_POST['submit']) ){
     } 
     
       
-     else if (preg_match("/\w+(@gmail\.com){1}$/",$password)){
+     else if (!preg_match("/\w+(@gmail\.com){1}$/",$email)){
         $emailError= "email invalid";
       }
     
@@ -27,6 +27,11 @@ if( isset($_POST['submit']) ){
       }
     
       else{
+        $parts = explode("@", $email);
+        $username = $parts[0];
+        session_start();
+        $_SESSION["emailS"]=$username;
+        $_SESSION["passS"]=$password;
         header("location:home.php");
       }
 

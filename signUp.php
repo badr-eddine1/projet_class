@@ -1,4 +1,5 @@
 <?php
+
   include("configSignUp.php");
 ?>
 <!DOCTYPE html>
