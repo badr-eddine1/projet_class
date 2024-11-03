@@ -1,5 +1,5 @@
 <?php
-include("configLogin.php")
+include("configLogin.php");
 
 
 ?>
@@ -22,7 +22,7 @@ include("configLogin.php")
             <form method="post">
          
               <div data-mdb-input-init class="form-outline mb-4">
-                <input type="email" name="emailName" id="form3Example3" class="form-control" placeholder="Email address"/>
+                <input type="email" value="<?php if(isset($_POST['submit'])) echo $email ?>" name="emailName" id="form3Example3" class="form-control" placeholder="Email address"/>
                 <label class="form-label" for="form3Example3"></label>
                 <span style="color: red;"><?php echo $emailError ?></span>
               </div>

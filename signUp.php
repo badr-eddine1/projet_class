@@ -10,9 +10,7 @@
 </head>
 <body>
 
-<!-- Section: Design Block -->
-<!-- <section class="text-center text-lg-start"> -->
-  <!-- Jumbotron -->
+
   <div class="container py-4 border rounded-5 p-3 bg-white shadow box-area">
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
