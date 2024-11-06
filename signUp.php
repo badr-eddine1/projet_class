@@ -62,7 +62,7 @@
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="https://thumbs.dreamstime.com/b/vector-vintage-fast-food-logo-retro-fry-potatoes-sign-bistro-icon-eatery-emblem-street-restaurant-cafe-etc-hand-drawn-burger-89901049.jpg" class="w-100 rounded-4 shadow-4"
+        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
           alt="" />
       </div>
     </div>
