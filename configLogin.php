@@ -32,7 +32,7 @@ if( isset($_POST['submit']) ){
         session_start();
         $_SESSION["emailS"]=$username;
         $_SESSION["passS"]=$password;
-        header("location:home.php");
+        header("location:index.php");
       }
 
   }
