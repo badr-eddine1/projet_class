@@ -5,12 +5,7 @@
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
   <title> Feane </title>
@@ -46,7 +41,7 @@
     <header class="header_section">
       <div class="container">
        
-        <nav class="navbar navbar-expand-lg custom_nav-container fixed-top">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
 
           <a class="navbar-brand" href="index.php">
             <span>
