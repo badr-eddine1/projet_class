@@ -48,7 +48,7 @@
        
         <nav class="navbar navbar-expand-lg custom_nav-container fixed-top">
 
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <span>
               Feane
             </span>
@@ -71,9 +71,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="book.php">Book Table</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><?php echo  $_SESSION["emailS"] ?></a>
               </li>
             </ul>
             <div class="user_option">
@@ -138,9 +135,17 @@
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
+              
               </form>
-              <a href="" class="order_online">
-                Order Online
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+            <li class="nav-item">
+                <a class="nav-link"  href="#"><?php echo  $_SESSION["emailS"] ?></a>
+              </li>
+            </ul>
+            </div>
+              <a href="login.php" class="order_online">
+                LOGOUT
               </a>
             </div>
           </div>
@@ -1190,58 +1195,8 @@
       </div>
     </div>
   </section>
-  <!-- end book section -->
 
-  <!-- client section -->
 
-  <section class="client_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center psudo_white_primary mb_45">
-        <h2>
-          What Says Our Customers
-        </h2>
-      </div>
-      <div class="carousel-wrap row ">
-        <div class="owl-carousel client_owl-carousel">
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                </p>
-                <h6>
-                  Moana Michell
-                </h6>
-                <p>
-                  magna aliqua
-                </p>
-              </div>
-              <div class="img-box">
-                <img src="images/client1.jpg" alt="" class="box-img">
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="detail-box">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                </p>
-                <h6>
-                  Mike Hamell
-                </h6>
-                <p>
-                  magna aliqua
-                </p>
-              </div>
-              <div class="img-box">
-                <img src="images/client2.jpg" alt="" class="box-img">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- end client section -->
@@ -1315,14 +1270,6 @@
             10.00 Am -10.00 Pm
           </p>
         </div>
-      </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">Code Runner</a>
-        </p>
       </div>
     </div>
   </footer>
