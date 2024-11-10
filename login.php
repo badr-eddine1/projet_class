@@ -1,53 +1,49 @@
-<?php
-include("configLogin.php");
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body >
-<div class="container py-4 border rounded-5 p-3 bg-white shadow box-area">
-    <div class="row g-0 align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="card cascading-right">
-          <div class="card-body p-5  text-center">
-            <h2 class="fw-bold mb-5">Sign in now</h2>
-            <form method="post">
-         
-              <div data-mdb-input-init class="form-outline mb-4">
-                <input type="email" value="<?php if(isset($_POST['submit'])) echo $email ?>" name="emailName" id="form3Example3" class="form-control" placeholder="Email address"/>
-                <label class="form-label" for="form3Example3"></label>
-                <span style="color: red;"><?php echo $emailError ?></span>
-              </div>
-              <div data-mdb-input-init class="form-outline mb-4">
-                <input type="password" name="passName" id="form3Example4" class="form-control" placeholder="password" />
-                <label class="form-label" for="form3Example4"></label>
-                <span style="color: red;"><?php echo $passwordError ?></span>
-              </div>
+<body>
 
-              <button type="submit" name="submit" class="btn btn-primary btn-block mb-4"> Sign up</button>
-            </form>
+<?php
+include("configLogin.php");
+?>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-lg">
+      <div class="card-body p-4">
+        <h3 class="text-center mb-4">Login</h3>
+        <?php  
+                    if(!empty($errormsg)) {
+                          echo " <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                            <strong> $errormsg </strong>
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'>
+                            </button>
+                            </div>";
+                    }
+                
+                    ?>
+        <form method="post" >
+          <div class="form-outline mb-3">
+            <input type="email" name="emailName" id="email" class="form-control" placeholder="Email address" value="<?php if(isset($_POST['submit'])) echo $email ?>"  />
           </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="https://thumbs.dreamstime.com/b/vector-vintage-fast-food-logo-retro-fry-potatoes-sign-bistro-icon-eatery-emblem-street-restaurant-cafe-etc-hand-drawn-burger-89901049.jpg" class="w-100 rounded-4 shadow-4"
-          alt="" />
+          <div class="form-outline mb-3">
+            <input type="password" name="passName" id="password" class="form-control" placeholder="Password"  />
+          </div>
+          <button type="submit" name="submit" class="btn btn-primary w-100 mb-3">Login</button>
+          <div class="text-center">
+            <a href="#" class="text-decoration-none">Forgot password?</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-
-
-
-
-
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
