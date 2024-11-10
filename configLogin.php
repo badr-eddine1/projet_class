@@ -1,4 +1,5 @@
 <?php
+include("dataBase.php");
 $errormsg= "";
 
 if( isset($_POST['submit']) ){
@@ -28,13 +29,33 @@ if( isset($_POST['submit']) ){
 
     
       else{
-        $parts = explode("@", $email);
-        $username = $parts[0];
-        session_start();
-        $_SESSION["emailS"]=$username;
-        $_SESSION["passS"]=$password;
-        header("location:index.php");
-      }
+            $sql = "SELECT email, password FROM Users";
+            
+            $result = mysqli_query($conn, $sql);
 
-  }
+            if (mysqli_num_rows($result) > 0) {
+
+            // output data of each row
+
+            while($row = mysqli_fetch_assoc($result)) {
+
+              if($row['email']==$email && $row['password']==$password){
+                $parts = explode("@", $email);
+                $username = $parts[0];
+                session_start();
+                $_SESSION["emailS"]=$username;
+                $_SESSION["passS"]=$password;
+                header("location:index.php");
+              }
+              else{
+                $errormsg="email ana password invalid";
+              }
+
+            }}
+
+          
+       
+      
+
+  }}
 ?>
