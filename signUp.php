@@ -1,5 +1,6 @@
 <?php
-include("configSignUp.php")
+include("configSignUp.php");
+include("dataBase.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,12 +54,14 @@ include("configSignUp.php")
                         <button type="submit" name="submit" class="btn btn-primary w-100">Sign Up</button>
                     </form>
 
-                    
-                  <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                  <strong>success Message</strong>
+                     <?php  
+            if(!empty($successmsg)) {
+                 echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                  <strong>$successmsg</strong>
                   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'>
                   </button>
-                  </div> 
+                  </div>"; }
+                  ?>
                 </div>
             </div>
         </div>

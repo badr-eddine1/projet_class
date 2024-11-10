@@ -1,5 +1,6 @@
 <?php
-    $errorMssage="";
+include("dataBase.php");
+    $errorMssage=$successmsg="";
     if(isset($_POST["submit"])){
         $fnV=$_POST["firstName"];
         $lnv=$_POST["lastName"];
@@ -20,7 +21,22 @@
             $errorMssage="pass not match";
         }
         else{
-            header("location:login.php");
+            $password = password_hash($passV,PASSWORD_DEFAULT);
+
+            $sql = "INSERT INTO Users (firstname,lastname, email,password)
+
+            VALUES ('$fnV', '$lnv','$emailV','$password')";
+
+            if (mysqli_query($conn, $sql)) {
+
+            $successmsg= "New record created successfully";
+
+            } else {
+
+            $errorMssage= "Error: " . $sql . "<br>" .
+            mysqli_error($conn);
+
+}
         }
     }
 
