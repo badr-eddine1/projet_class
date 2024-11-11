@@ -11,6 +11,7 @@
 
 <?php
 include("configLogin.php");
+include("dataBase.php");
 ?>
 
 <div class="container d-flex justify-content-center align-items-center min-vh-100">

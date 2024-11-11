@@ -1,5 +1,6 @@
 <?php
 include("dataBase.php");
+$valide=0;
 $errormsg= "";
 
 if( isset($_POST['submit']) ){
@@ -34,24 +35,24 @@ if( isset($_POST['submit']) ){
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
-
-            // output data of each row
-
-            while($row = mysqli_fetch_assoc($result)) {
-
-              if($row['email']==$email && $row['password']==$password){
-                $parts = explode("@", $email);
-                $username = $parts[0];
-                session_start();
-                $_SESSION["emailS"]=$username;
-                $_SESSION["passS"]=$password;
-                header("location:index.php");
+              // Parcours de chaque ligne
+              while ($row = mysqli_fetch_assoc($result)) {
+                if ($row['email'] == $email && password_verify($password, $row['password'])) {// pour un mot de passe haché, utilise password_verify
+                      $valid = 1;
+                      $parts = explode("@", $email);
+                      $username = $parts[0];
+                      session_start();
+                      $_SESSION["emailS"] = $username;
+                      $_SESSION["passS"] = $password;
+                      header("location:read.php");
+                      exit;
+                  }
               }
-              else{
-                $errormsg="email ana password invalid";
+          
+              if ($valide== 0) { // Correction de l'erreur de variable
+                  $errormsg = "email and password invalid";
               }
-
-            }}
+          }
 
           
        
