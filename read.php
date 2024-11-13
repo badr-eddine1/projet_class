@@ -37,7 +37,7 @@
       <td scope='col'>$row[email]</td>
       <td>
       <a  class='btn btn-success btn-sm' href='Update.php?idUpdated=$row[id]'>edit</a>
-      <a  class='btn btn-danger btn-sm' href='delete.php'>edit</a>
+      <a  class='btn btn-danger btn-sm' href='delete.php?idDeleted=$row[id]'>Delete</a>
       </td>
       </tr>
       
