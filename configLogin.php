@@ -24,7 +24,7 @@ if( isset($_POST['submit']) ){
     } 
     
       
-    else if(strlen($password)<=8){
+    else if(strlen($password)<8){
         $errormsg="the password must containe 8 chars";
       }
 

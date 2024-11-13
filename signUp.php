@@ -51,7 +51,8 @@ include("dataBase.php");
                             
                             <input type="password" name="ConfipassName" id="confirmPassword" class="form-control" placeholder="Confirm Password" >
                         </div>
-                        <button type="submit" name="submit" class="btn btn-primary w-100">Sign Up</button>
+                        <button type="submit" name="submit" class="btn btn-primary w-100">Sign Up</button><br><br>
+                        <a href="login.php" class="btn btn-primary w-100">login</a>
                     </form>
 
                      <?php  

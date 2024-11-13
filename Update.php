@@ -78,13 +78,12 @@ else if(isset($_POST["submit"])){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body class="d-flex align-items-center justify-content-center vh-100 bg-light">
-
 <div class="container">
-    <div class="row ">
+    <div class="row justify-content-center">
         <div class="col-md-6 col-lg-5">
-            <div class="card ">
+            <div class="card shadow-sm">
                 <div class="card-body p-5">
-                    <h3 class="text-center mb-4">Sign Up</h3>
+                    <h3 class="text-center mb-4">Update Form</h3>
                     <?php  
                     if(!empty($errorMssage)) {
                           echo " <div class='alert alert-warning alert-dismissible fade show' role='alert'>
@@ -109,7 +108,7 @@ else if(isset($_POST["submit"])){
                             
                             <input type="email" name="emailName" id="email" value="<?php  echo $emailV ?>" class="form-control" placeholder="Email Address" >
                         </div>
-                        <button type="submit" name="submit" class="btn btn-primary w-100"> Update</button><br>
+                        <button type="submit" name="submit" class="btn btn-primary w-100"> Update</button><br><br>
                         <a href="read.php" class="btn btn-primary w-100">cancel</a>
                     </form>
 
