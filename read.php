@@ -15,12 +15,13 @@
       <th scope='col'>FirstName</th>
       <th scope='col'>LastName</th>
       <th scope='col'>Email</th>
+      <th scope='col'>Action</th>
     </tr>
   </thead>
   <tbody>
     <?php
     include("dataBase.php");
-    $sql = "SELECT  id,firstname,lastname, email FROM Users";
+    $sql = "SELECT  id,firstname,lastname, email FROM User";
     
     $result = mysqli_query($conn, $sql);
     
@@ -34,8 +35,16 @@
       <td scope='col'>$row[firstname]</td>
       <td scope='col'>$row[lastname]</td>
       <td scope='col'>$row[email]</td>
- </tr>";
-    
+      <td>
+      <a  class='btn btn-success btn-sm' href='Update.php?idUpdated=$row[id]'>edit</a>
+      <a  class='btn btn-danger btn-sm' href='delete.php'>edit</a>
+      </td>
+      </tr>
+      
+      "
+      
+      ;
+      
     }
     
     }

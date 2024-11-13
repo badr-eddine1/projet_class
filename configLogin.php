@@ -30,14 +30,14 @@ if( isset($_POST['submit']) ){
 
     
       else{
-            $sql = "SELECT email, password FROM Users";
+            $sql = "SELECT email, pass FROM User";
             
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
               // Parcours de chaque ligne
               while ($row = mysqli_fetch_assoc($result)) {
-                if ($row['email'] == $email && password_verify($password, $row['password'])) {// pour un mot de passe haché, utilise password_verify
+                if ($row['email'] == $email && password_verify($password, $row['pass'])) {// pour un mot de passe haché, utilise password_verify
                       $valid = 1;
                       $parts = explode("@", $email);
                       $username = $parts[0];

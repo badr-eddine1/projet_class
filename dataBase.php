@@ -28,7 +28,7 @@ $conn = mysqli_connect($servername, $username,$pass);
 // }
 mysqli_select_db($conn,'gsapp');
 // $query = "
-// CREATE TABLE Users (
+// CREATE TABLE User (
 
 // id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY
 // KEY,

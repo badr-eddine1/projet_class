@@ -13,6 +13,7 @@ include("dataBase.php");
         else if (!preg_match("/\w+(@gmail\.com){1}$/",$emailV)){
             $errorMssage= "email invalid";
           }
+          
      
         else if(!preg_match("/^[A-Z]+/",$passV)){
             $errorMssage="password must containe capital letter !!.";
@@ -23,7 +24,7 @@ include("dataBase.php");
         else{
             $password = password_hash($passV,PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO Users (firstname,lastname, email,password)
+            $sql = "INSERT INTO User (firstname,lastname, email,pass)
 
             VALUES ('$fnV', '$lnv','$emailV','$password')";
 
